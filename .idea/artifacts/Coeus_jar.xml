@@ -2,7 +2,7 @@
   <artifact type="jar" name="Coeus:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/Coeus_jar</output-path>
     <root id="archive" name="Coeus.jar">
-      <element id="module-output" name="Coeus" />
+      <element id="module-output" name="Simulator" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/commons-io/commons-io/2.4/commons-io-2.4.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/log4j/log4j/1.2.15/log4j-1.2.15.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/de/grundid/opendatalab/geojson-jackson/1.5/geojson-jackson-1.5.jar" path-in-jar="/" />

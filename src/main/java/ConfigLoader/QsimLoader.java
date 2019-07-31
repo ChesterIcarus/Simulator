@@ -11,6 +11,8 @@ import org.w3c.dom.NodeList;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 
 class QsimLoader {
 
@@ -128,4 +130,56 @@ class QsimLoader {
         }
         config.qsim().setMainModes(Arrays.asList(mainModes));
     }
+
+    /**
+     * Parses the Node Offset double from the XML element
+     * Applies the result to the config
+     * @param config
+     * @param element
+     */
+    private static void parseNodeOffset(Config config, Element element){
+        config.qsim().setNodeOffset(Double.parseDouble(element.getTextContent()));
+    }
+
+    /**
+     *
+     * @param config
+     * @param element
+     */
+    private static void parseLinkWidthForVis(Config config, Element element){
+        config.qsim().setNodeOffset(Double.parseDouble(element.getTextContent()));
+    }
+
+    /**
+     *
+     * @param config
+     * @param element
+     */
+    private static void parseLinkDynamics(Config config, Element element){
+        config.qsim().setLinkDynamics(QSimConfigGroup.LinkDynamics.valueOf(element.getTextContent()));
+    }
+
+    /**
+     * Parses the boolean from the XML element, "true" being the only valid True
+     * Applies the result to the config
+     * @param config
+     * @param element
+     */
+    private static void parseUseLanes(Config config, Element element){
+        config.qsim().setUseLanes(Boolean.getBoolean(element.getTextContent()));
+    }
+
+    /**
+     * Parses the Seep Modes from the XML element, splitting on commas
+     * @param config
+     * @param element
+     */
+    private static void parseSeepModes(Config config, Element element){
+        config.qsim().setSeepModes(Arrays.asList(
+                element.getTextContent().replaceAll(
+                        " ", "").split(",")));
+    }
+
+
+
 }

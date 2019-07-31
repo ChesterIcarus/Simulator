@@ -1,4 +1,6 @@
-import ConfigLoader.ConfigLoader;
+package ConfigLoader;
+
+import ArgParser.CommandLineArgs;
 import com.beust.jcommander.JCommander;
 
 import org.matsim.core.config.Config;
@@ -43,6 +45,19 @@ public class DynamicConfig {
 
 
     public void loadQsimFile(String file){
+    }
+
+    /**
+     * <networkChangeEvents>
+     *
+     *  <networkChangeEvent startTime="00:28:00">
+     *      <link refId="1837925"/>
+     *      <flowCapacity type="absolute" value="0"/>
+     *      <freespeed type="absolute" value="0.0"/>
+     *  </networkChangeEvent>
+     * @param file
+     */
+    public void loadTimeVariant(String file){
 
     }
 
