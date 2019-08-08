@@ -4,9 +4,6 @@ import com.beust.jcommander.JCommander;
 import org.matsim.api.core.v01.Scenario;
 import org.matsim.core.config.Config;
 import org.matsim.core.controler.Controler;
-import org.matsim.core.router.NetworkRoutingModule;
-import org.matsim.core.router.NetworkRoutingProvider;
-import org.matsim.core.scenario.ScenarioByConfigModule;
 import org.matsim.core.scenario.ScenarioUtils;
 
 public class Simulator {
